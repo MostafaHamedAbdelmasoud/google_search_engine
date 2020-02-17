@@ -7,7 +7,7 @@ if(isset($_GET["term"])) {
 	$term = $_GET["term"];
 	
 }
-elseif($_GET["term"]=" "){
+elseif($_GET["term"]=""){
 	$urls = index.php;
 	header('Location: '.$urls);
 
@@ -27,25 +27,12 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
 <!DOCTYPE html>
 <html>
 <head>
-<title>Welcome to caffeine</title>
-	<meta name="description" content="Search the web for sites and images.">
-	<meta name="keywords" content="Search engine, caffeine, websites">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome to Doodle</title>
 
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.1/dist/instantsearch.min.css">
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-	<link rel="stylesheet" type="text/css" href="assets/css/algolia.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="icon" href="assets/images/photo.png">
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
-	
-	<script type="text/javascript" src="assets/js/script.js"></script>
 
-
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -68,7 +55,7 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
 
 						<div class="searchBarContainer">
 							<input type="hidden" name="type" value="<?php echo $type; ?>">
-							<input id="search-input" class="searchBox" type="text" name="term" value="<?php echo $term; ?>" autocomplete="off">
+							<input class="searchBox" type="text" name="term" value="<?php echo $term; ?>" autocomplete="off">
 							<button class="searchButton">
 								<img src="assets/images/icons/search.png">
 							</button>
@@ -80,18 +67,6 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
 
 			</div>
 
-
-			<main>
-		<div id="hits" style="z-index:9999999; position:absolute;
-	left: 170px;
-    top: 93px;
-    width: 80%;">
-	
-		</div>	
-		<div id="paginations">
-
-		</div>
-	</main>
 
 			<div class="tabsContainer">
 
@@ -246,6 +221,8 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
 					</div>
 
 					</script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>

@@ -6,16 +6,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome to Doodle</title>
-
+<title>Welcome to caffeine</title>
 	<meta name="description" content="Search the web for sites and images.">
-	<meta name="keywords" content="Search engine, doodle, websites">
-	<meta name="author" content="Reece Kenney">
+	<meta name="keywords" content="Search engine, caffeine, websites">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.1/dist/instantsearch.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/algolia.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="icon" href="assets/images/photo.png">
+
+	<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+	
+
 
 </head>
 <body>
@@ -86,13 +94,6 @@
 	
 
 	
-
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
-	<script src="assets/js/script.js"></script>
 
 </body>
 </html>

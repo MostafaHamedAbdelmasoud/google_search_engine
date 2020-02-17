@@ -3,12 +3,6 @@ var timer;
 $(document).ready(function() {
 
 	
-
-  
-
-
-	
-
 const search = instantsearch({
   appId: "STCRIU9DFR",
   apiKey: "7cecb933edf4555a8f6b280fc9b721d8",
@@ -47,6 +41,30 @@ search.addWidget(
 
 
   search.start();
+
+
+  $("#search-input").click(function () {            
+	  $('#hits').toggle();
+	});
+	
+	$('#search-input').keypress(function() {
+	$('#hits').show();
+	});
+
+
+	$('#search-input').keyup(function() {
+	$('#hits').show();
+	});
+
+  $(document).click(function () {            
+	$('#hits').slideUp(function(){
+		$("#search-input").click(function (event) {            
+			$('#hits').toggle();
+		  });
+	});
+});
+
+
 	$(".result").on("click", function() {
 		
 		var id = $(this).attr("data-linkId");
@@ -100,6 +118,7 @@ search.addWidget(
 
 });
 
+
 function loadImage(src, className) {
 
 	var image = $("<img>");
@@ -142,6 +161,7 @@ function increaseLinkClicks(linkId, url) {
 
 }
 
+
 function increaseImageClicks(imageUrl) {
 
 	$.post("ajax/updateImageCount.php", {imageUrl: imageUrl})
@@ -155,55 +175,5 @@ function increaseImageClicks(imageUrl) {
 
 }
 
-
-  
-
-// Uncomment the following widget to add categories list.
-
-/* search.addWidget(
-  instantsearch.widgets.refinementList({
-    container: "#categories",
-    attributeName: "categories",
-    autoHideContainer: false,
-    templates: {
-      header: "Categories"
-    }
-  })
-); */
-
-// Uncomment the following widget to add brands list.
-
-/* search.addWidget(
-  instantsearch.widgets.refinementList({
-    container: "#brands",
-    attributeName: "brand",
-    searchForFacetValues: true,
-    autoHideContainer: false,
-    templates: {
-      header: "Brands"
-    }
-  })
-); */
-
-// Uncomment the following widget to add price range.
-
-/*  search.addWidget(
-  instantsearch.widgets.rangeSlider({
-    container: "#price",
-    autoHideContainer: false,
-    attributeName: "price",
-    templates: {
-      header: "Price"
-    }
-  })
-); */
-
-// Uncomment the following widget to add pagination.
-
-/* search.addWidget(
-  instantsearch.widgets.pagination({
-    container: "#pagination"
-  })
-); */
 
 
